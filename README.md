@@ -18,7 +18,6 @@ Create a new repository
  ![image](https://github.com/user-attachments/assets/3064bb3b-eb5a-400d-92d8-b227bf198bf8)
 
 Clone the repository to my local machine.
-
 ![image](https://github.com/user-attachments/assets/f00e1008-ed42-4623-94ee-3e44b2953b57)
 
 1a-1:VirtualBox Installed 
@@ -36,6 +35,7 @@ Step 3: Install Ubuntu
 ![image](https://github.com/user-attachments/assets/d3635652-ef20-4b93-b266-50ef09f6daa3)
 
 Key in the username and password
+
 ![image](https://github.com/user-attachments/assets/17028ce2-301e-4fa6-96a8-fd8a097eb5d6)
 
 Configure the VM 20GB storage 4GB RAM.
@@ -70,37 +70,118 @@ Installed Kali
 
 ------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Lab 1a-2: Ubuntu Desktop and Command Line Familiarisation
 
 [Server_Environments_and_Architectures/ubuntu_desktop_familiarisation.md]
 (https://github.com/SCH-IT-MurdochUni/NetworkingLabs/blob/e0a4d12bb05b3a4bf0654b9c427c8eaecbee065a/Server_Environments_and_Architectures/ubuntu_desktop_familiarisation.md)
+
+Step 1: Open Firefox
+![image](https://github.com/user-attachments/assets/4e95a122-e20f-4a9e-b244-cef2cb2dbbfa)
+
+Open the File and the App Store.
+![image](https://github.com/user-attachments/assets/09383411-e85d-45d2-8265-7d4641170dad)
+
+Step 2: Terminal Command Outpu
+Familiarity with Ubuntu Linux 
+try command: ps -e
+![image](https://github.com/user-attachments/assets/b7375bf0-0a47-4440-9a45-6962e90bfe94)
+
+Command: top
+![image](https://github.com/user-attachments/assets/56bff7b8-bb23-47c8-984d-0c6c1fede3f1)
+
+Command: q to quit the top command
+Command: ls
+![image](https://github.com/user-attachments/assets/d8c77900-d16a-4912-87a3-0e02a3607d96)
+
+Command: ls -la
+![image](https://github.com/user-attachments/assets/cc3106f2-818a-4b90-8525-e103a04040e3)
+
+The difference between ls and ls -la
+ls
+•	Lists files and directories in the current directory.
+•	Shows only names (no hidden files, no detailed info).
+
+ls -la (or ls -l -a)
+•	-l → Long format (detailed listing).
+•	-a → Show all files (including hidden files starting with .).
+
+
+Command: ls -alt
+![image](https://github.com/user-attachments/assets/12943b87-7268-454d-824d-cc88e4fb5c4b)
+
+Try command: touch testfile (to create a file)
+Command: gedit testfile (edit the file)
+Command: featherpad testfile( to view the file)
+
+![image](https://github.com/user-attachments/assets/35bcb304-5d0a-47ee-98e4-258a07703c83)
+
+Command: nano testfile
+![image](https://github.com/user-attachments/assets/a91a516f-5be4-42f8-b189-2c693a24ec08)
+
+Difference Between gedit and nano
+Feature			    gedit (Graphical)	                                     nano (Terminal-based)
+Interface		  	GUI (Graphical)	                                       Text-based (runs in terminal)
+Dependency			 Requires a desktop environment (GNOME)	                Works in pure terminal (no GUI needed)
+Ease of Use			More user-friendly (menus, mouse support)	             Simpler, keyboard shortcuts only
+Features			   Syntax highlighting, plugins, tabs	                    Basic text editing, lightweight
+Remote Use			 Usually won't work over SSH without X11 forwarding	    Works perfectly over SSH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
