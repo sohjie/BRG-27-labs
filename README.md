@@ -450,7 +450,10 @@ Step 8: Access the file via browser
 
 Step 9: Insert Link in HTML
 
+http://15.152.31.28
+![image](https://github.com/user-attachments/assets/f708b64f-8150-48f1-a546-7d2c916c5255)
 
+------------------------------------------------------------------------------------------------
 
 
 Step 10: Budget Monitoring Enabled
@@ -481,34 +484,469 @@ Save as index.html, double click it
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
 
+2b-2 Lab - Bash Coding 
+Familiarize the commands
+![image](https://github.com/user-attachments/assets/9c56bdac-e153-4a9b-9b22-6ecd04350d95)
+
+------------------------------------------------------------------------------------------------
+
+Step 1: Create a new Directory Command: 
+mkdir LabFiles 
+cd LabFiles
+![image](https://github.com/user-attachments/assets/2c916d29-a5a5-48df-91cc-2f754593777c)
+
+1.	Create a New File Command: touch notes.txt
+
+![image](https://github.com/user-attachments/assets/169c997b-5564-41e6-9926-01cb5c94bcf4)
+
+2.	Write Content to the File Command: echo "This is a Bash scripting lab." > notes.txt
+3.	Display File Content Command: cat notes.txt
+
+![image](https://github.com/user-attachments/assets/bf451dfe-cf88-410c-bcb9-3e7328008e68)
+
+4.	Copy the file Command: cp notes.txt backup_notes.txt
+
+![image](https://github.com/user-attachments/assets/66aa37c7-8ddc-43dd-af0a-3c5769e1c0f3)
+
+5.	Rename the file Command: mv backup_notes.txt old_notes.txt
+
+![image](https://github.com/user-attachments/assets/16d219b0-0a76-4c9b-b2aa-a762254e20b0)
+
+6.	Remove a file Command: rm old_notes.txt
+   
+![image](https://github.com/user-attachments/assets/3a878f4c-4c7e-4cff-8992-8e37997f6a23)
+
+------------------------------------------------------------------------------------------------
+
+Step 2: What command did you use to create a new directory?
+o	mkdir LabFiles 
+•	How can you view the contents of a file without opening it in a GUI besed text editor?
+o	cat [filename].txt
+•	What is the difference between cp and mv commands?
+o	cp is to copy the file, mv is to rename the file.
+
+------------------------------------------------------------------------------------------------
+
+Step 3: Basic Bash Script Created and Run 
+Creating and Executing Basic Bash Scripts
+-	Command: cd ~/LabFiles
+-	Create a new script file Command: nano hello_world.sh
+
+![image](https://github.com/user-attachments/assets/727f2f21-f889-44c4-b9a2-bddd6916b30b)
+
+-	Add content to the script:
+![image](https://github.com/user-attachments/assets/56181c7a-70d7-4ec8-a819-ab44ed667529)
+
+-	Press CTRL + X, then Y, and ENTER to save the file. Make the Script Executable command: chmod 777 hello_world.sh
+![image](https://github.com/user-attachments/assets/032fb100-eabc-45fb-a2da-8249073dc124)
+
+-	Execute the Script: ./hello_world.sh 
+  nano hello_world.sh
+ 	![image](https://github.com/user-attachments/assets/de26115e-811c-4a7b-bb9e-fb09fd51bfd5)
+
+-	Modify the echo command: echo "Welcome to the Bash scripting lab!"
+![image](https://github.com/user-attachments/assets/c6f5f866-dc6f-494d-ab57-619897522aee)
+
+-	Save and execute command: ./hello_world.sh
+
+------------------------------------------------------------------------------------------------
+
+Step 4: Reflection Questions
+•	What is the purpose of the chmod +x command?
+  o	Is to add execute permission to the script file.
+•	Why do we use the shebang (#!/bin/bash) at the beginning of scripts?
+  o	Is to tell the system which interpreter to use to run the script.
+•	How can you modify the script to display a personalized message?
+  o	Use echo “[message]”
+
+------------------------------------------------------------------------------------------------
+
+Step 5: Loop and Conditional Script
+Implementing Loops and Conditionals
+-	Create a new script command: BASH nano system_info.sh, and add the content.
+
+![image](https://github.com/user-attachments/assets/b55bb44a-096f-4636-8c04-439e951223c0)
+
+Save and Make Executable command: chmod 777 system_info.sh
+
+![image](https://github.com/user-attachments/assets/a4282620-5929-4189-b2d7-8aa4834a773e)
+
+Run the script command: ./system_info.sh
+
+![image](https://github.com/user-attachments/assets/fbee2f0f-51da-4246-96ab-44381d726484)
+
+------------------------------------------------------------------------------------------------
+
+Step 6: Reflection Questions(Loops and Conditionals) 
+•	How does the for loop in the script operate?
+  #!/bin/bash
+  for i in {1..5}
+  do
+   echo "Number: $i"
+done
+•	What happens if a user enters a number greater than 10?
+  o	It shows number out of range
+•	How can you modify the script to handle invalid inputs gracefully?
+Accepts a number from the user. 
+Validates that it’s a number between 1 and 10. 
+Uses that number as the upper limit in the loop.
+
+![image](https://github.com/user-attachments/assets/b064db4a-5382-415d-b13d-4e170f4c9cfd)
+
+------------------------------------------------------------------------------------------------
+
+Step 7: System Monitoring Script Created and Run
+Generate a resource_monitor.sh script, and run
+
+![image](https://github.com/user-attachments/assets/eacca78d-f38a-4251-95bc-1cfd050f5dfd)
+
+Make the script executable: chmod +x resource_monitor.sh
+
+![image](https://github.com/user-attachments/assets/7c62832f-b820-44a1-a1c2-a64db06e1ea3)
+
+Run the script: ./resource_monitor.sh
+
+![image](https://github.com/user-attachments/assets/9a67f472-ad1d-46a8-8994-0d5f95ef7bc7)
+
+------------------------------------------------------------------------------------------------
+
+Step 8: Reflection: Monitoring Automation
+• What does free -h show?
+free -h displays the system's memory usage, including total, used, free, shared, buffer/cache, and available memory in a human-readable format (e.g., MB or GB).
+
+![image](https://github.com/user-attachments/assets/d9e94022-04ba-4fd9-9f02-236026d8cff3)
+
+How can this script be modified to monitor network usage?
+ - can add a command like ip -s link to monitor network traffic.
+
+![image](https://github.com/user-attachments/assets/3e95af4c-47ad-47b6-9db4-1f561cc87409)
+
+Why is automation important for admins?
+- Automation helps system administrators save time, reduce human error, and ensure consistent monitoring. It allows for proactive issue detection and improves system reliability and performance.
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+Lab 3 AM
+Activity 1: DNS Lab Objectives
+Understand DNS Concepts
+-	Learn how DNS translates domain names (e.g., example.com) into IP addresses.
+-	Understand the role of forward and reverse DNS lookups.
+-	
+------------------------------------------------------------------------------------------------
+
+Step 1: Setup a DNS Server
+
+![image](https://github.com/user-attachments/assets/0fa1ceec-bffa-4d8a-a2fc-347c6ff0de65)
+
+Check public IP
+![image](https://github.com/user-attachments/assets/65125ee6-ebb6-4380-94e0-cd763ea69e6d)
+
+------------------------------------------------------------------------------------------------
+
+Step 3: install Apache on Ubuntu VM
+![image](https://github.com/user-attachments/assets/b70bffcb-9232-490e-9793-e9b967d3141c)
+
+Check Apache if running: 
+![image](https://github.com/user-attachments/assets/ee6cb687-507d-45ee-b274-d983452802bf)
+
+------------------------------------------------------------------------------------------------
+
+Step 4: Verify DNS Mapping
+![image](https://github.com/user-attachments/assets/a964e6cd-f008-4fb2-93cc-fc8cea95eadc)
+
+![image](https://github.com/user-attachments/assets/3f45324b-a304-4b32-a2d3-f80e574bfb9f)
+
+------------------------------------------------------------------------------------------------
+
+Step 5: Screenshot Apache Welcome Page
+![image](https://github.com/user-attachments/assets/c9e815a4-8063-4269-a1b5-5ab2c140d2de)
+
+------------------------------------------------------------------------------------------------
+
+Step 6: Screenshot DNS Test Output
+
+![image](https://github.com/user-attachments/assets/d823f2e8-9fee-454e-b5fb-e78852c11929)
+
+
+Use Linux VM (Ubuntu VM)
+Install BIND9
+
+![image](https://github.com/user-attachments/assets/25e6367b-c8e5-49e6-a3b1-9f2b1da6d75d)
+
+Configure Zone File
+•	Create a forward zone file (e.g., db.example.com) to map domain names to IPs.
+•	Create a reverse zone file (e.g., db.192) to map IPs back to domain names.
+•	Define these zones in named.conf.local.
+
+------------------------------------------------------------------------------------------------
+
+Activity 2: Encrypt TLS Certificate Setup
+Step 1: Install Certbot and Apache Plugin
+
+![image](https://github.com/user-attachments/assets/1b655323-3bc4-4333-a142-c5ffcf51b1e6)
+
+Then install Apache plugin:
+
+![image](https://github.com/user-attachments/assets/8ae12157-1721-42c3-a5fa-e7f6ffe091b1)
+
+------------------------------------------------------------------------------------------------
+
+Step 2: Install Snapd
+
+-sudo apt install snapd
+![image](https://github.com/user-attachments/assets/03a8dc71-fdc7-4224-93e0-994729b3e065)
+
+-Ensure Snap’s path is available: 
+sudo ln -s /var/lib/snapd/snap /snap
+
+![image](https://github.com/user-attachments/assets/14587570-4e30-4e97-a3f0-cdb44b9ee95b)
+
+-Install Certbot using Snap:
+![image](https://github.com/user-attachments/assets/9f870081-1b24-4570-a0cc-0db184f5730c)
+
+-Create a symlink for Certbot
+
+------------------------------------------------------------------------------------------------
+
+Step 3: Issue TLS Certificate
+
+![image](https://github.com/user-attachments/assets/7fa5d2ce-3a0f-4dd4-a90c-321afd0eb5b4)
+
+------------------------------------------------------------------------------------------------
 
 
 
+Step 5: Certbot Success Message
+
+![image](https://github.com/user-attachments/assets/9e3ee2a9-4445-45b9-ab2e-92483ad56fd1)
+
+------------------------------------------------------------------------------------------------
+
+Step 4: Enable HTTPS on Apache
+Certbot automatically updates Apache config.
+You can verify: 
+sudo apachectl configtest
+sudo systemctl restart apache2
+ 
+------------------------------------------------------------------------------------------------
+Step 5: Verify HTTPS with Lock Icon
+
+![image](https://github.com/user-attachments/assets/36398f01-95a3-4d5b-b7ea-c72114d2137a)
 
 
+------------------------------------------------------------------------------------------------
+
+Step 6: Test Auto-Renewal
+
+![image](https://github.com/user-attachments/assets/3aeddedb-d56a-4f52-987e-086d41a32159)
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+Lab 3 PM
+Step 1: Practice Bash Commands Executed
+Step 2: Test files and directories created
+
+![image](https://github.com/user-attachments/assets/23c5717b-5491-4729-acb3-68e4e5f4bb37)
+
+------------------------------------------------------------------------------------------------
+
+Step 3: Some Bash basics
+Save the code in text editor, and provide privileges
+
+![image](https://github.com/user-attachments/assets/6d414996-6b2f-48b1-a918-0bec42f5c7b6)
+
+![image](https://github.com/user-attachments/assets/92cdb6af-ff78-48a1-96fc-a2c45b70bf4c)
+
+------------------------------------------------------------------------------------------------
+
+Variables
+
+![image](https://github.com/user-attachments/assets/3c7b1599-fec8-4a56-b8c5-c4f685ff4012)
+
+Modify the code 1
+![image](https://github.com/user-attachments/assets/5ebd8cc7-eba2-4b0f-ace0-9cb218560628)
+
+Create files and folders in /home/ubuntu/Documents:
+![image](https://github.com/user-attachments/assets/265846cd-5690-47f8-b837-79ecfd427a58)
+
+Results:
+![image](https://github.com/user-attachments/assets/8bd06590-8f6d-4083-923a-a59d56da6992)
+
+------------------------------------------------------------------------------------------------
+
+Creating a basic script: mkdir backup
+
+![image](https://github.com/user-attachments/assets/7d2593e8-d468-41a7-88c8-ff69a35e7019)
+
+![image](https://github.com/user-attachments/assets/de51fd0e-7c5c-494f-af28-2e5c7e08bfdd)
+
+------------------------------------------------------------------------------------------------
+
+Give the file execute permissions for testscript.sh
+![image](https://github.com/user-attachments/assets/63af8a4c-2ab1-4dfd-9233-1d619741be18)
+
+------------------------------------------------------------------------------------------------
+
+tep 4: Script Moved to /usr/bin and Tested
+Making the script available system wide
+Move the testscript file to user bin command: sudo mv /home/ubuntu/testscript /usr/bin/testscript
+
+![image](https://github.com/user-attachments/assets/ce67ef70-c076-4224-9a0e-610bde99d4f4)
+
+Run change the owner command: sudo chown ubuntu /usr/bin/testscript
+
+![image](https://github.com/user-attachments/assets/747c23b8-2ae8-4575-8e63-b557e2b8ef20)
+
+Test the file is available to be executed system wide and display the system variable $PATH
+
+![image](https://github.com/user-attachments/assets/76219b31-29fd-406a-a44c-a5858b38b2a6)
+
+------------------------------------------------------------------------------------------------
+
+Step 5: ZIP Archive with Date Filename
+Creating an archive
+Zipping command: zip zippedfile * (tested in backup folder)
+
+![image](https://github.com/user-attachments/assets/80214ef3-8b9a-413a-82d0-e762ece683b8)
+
+------------------------------------------------------------------------------------------------
+
+Adding the date
+Create a script call currentfile and copy the command: now=$(date +"%d_%m_%y")
+![image](https://github.com/user-attachments/assets/a6f149e9-e333-43a7-9564-b57e476539be)
+
+------------------------------------------------------------------------------------------------
+
+Save the script
+Make it executable and run it.
+The result show below:
+
+![image](https://github.com/user-attachments/assets/d2fb8ac2-4447-4c7b-9ac9-0d20e80a7e1c)
+
+Command for zip –help
+![image](https://github.com/user-attachments/assets/82257a09-9d6f-4d45-951c-18d991913bd8)
+
+------------------------------------------------------------------------------------------------
+
+Cron
+Edit cron with command: sudo nano /etc/crontab
+
+![image](https://github.com/user-attachments/assets/b4772595-64f0-48f4-9ded-3191c65e2496)
+
+Edit the crontab:
+crontab -e, 
+add the line 9 * * * * /usr/bin/bash /home/sohjie/testscript.sh (Add this line (runs at 9 mins past every hour))
+
+![image](https://github.com/user-attachments/assets/7e9fa61f-da32-4d37-a547-146250c3f34a)
+
+------------------------------------------------------------------------------------------------
+
+Step 6: Creating the backup script
+Create the backup script: nano /home/ubuntu/testscript.sh
+
+![image](https://github.com/user-attachments/assets/0cd3b608-8907-4fe5-8c78-f84adf9563eb)
+
+Make it executable
+
+![image](https://github.com/user-attachments/assets/f9a331ff-22b7-4115-b689-ec13b1322020)
+
+Let the cron run for an hours or trigger manually:
+
+![image](https://github.com/user-attachments/assets/6442d979-4fa6-4f91-9c8d-fbdd7e31120f)
+
+------------------------------------------------------------------------------------------------
+
+Step 7: Successful Cron Execution Verified
+Verify: ls -lh /home/ubuntu/backup_*
+
+![image](https://github.com/user-attachments/assets/855bd515-6ae8-4f8c-84b7-62d4641650f5)
+
+Result:
+![image](https://github.com/user-attachments/assets/a12f1854-6db6-4f98-9393-0bd0cf6f52d1)
+
+------------------------------------------------------------------------------------------------
+
+Step 8: SCP to Cloud Working
+Check if Backup File Exists
+
+![image](https://github.com/user-attachments/assets/695a891e-8f38-4893-a6ba-f45d28b8e495)
+
+Manually Run SCP: ssh -i /home/sohjie/key.pem sohjie@192.168.91.129
+
+![image](https://github.com/user-attachments/assets/87788b2d-f8f9-4223-9fb5-a7ca0daac3cc)
+
+Verify Transfer:
+ls -lh ~/backup_2025-07-05_11-09.zip
+
+![image](https://github.com/user-attachments/assets/c4d2c208-d575-4571-97a8-945dcaf6d2fa)
+
+------------------------------------------------------------------------------------------------
+
+Step 9: SSH Certificate Accepted by Root
+ssh -i /home/sohjie/key.pem sohjie@192.168.91.129
+
+![image](https://github.com/user-attachments/assets/17968e06-ffdf-4f9f-98cc-fadfef4cce51)
+
+------------------------------------------------------------------------------------------------
+
+Step 10: Final Script Submitted
+
+![image](https://github.com/user-attachments/assets/0e2a4826-4a0c-4150-bab2-50942e3f449d)
+
+And ensure it executable:
+chmod +x /home/sohjie/tscript.sh
+
+![image](https://github.com/user-attachments/assets/0b093c46-df36-46e7-ba37-6a5533bddb28)
+
+------------------------------------------------------------------------------------------------
+
+Step 11: Run Script automatically on boot
+Create a systemed service: sudo nano /etc/systemd/system/backupboot.service
+
+![image](https://github.com/user-attachments/assets/50fb3cc9-eebe-4b54-a601-db3cb117fd83)
 
 
+Enable and start the service:
+sudo systemctl daemon-reexec
+sudo systemctl enable backupboot
 
+![image](https://github.com/user-attachments/assets/36a2d8d7-5e6b-4205-8b77-b2e9c8dbfad8)
 
+Reboot to test: sudo reboot
+After reboot run: ls -lh /home/sohjie/backup_*.zip
 
+![image](https://github.com/user-attachments/assets/859e947d-e962-48ad-a38a-c904b3deb1ed)
 
+------------------------------------------------------------------------------------------------
 
+Step 12: Customized MOTD with neofetch & figlet
+Install figlet and neofetch
+sudo apt update
+sudo apt install figlet neofetch -y
 
+![image](https://github.com/user-attachments/assets/d5ba851b-40a7-4a34-9a9e-15f481a0514d)
 
+Create a Custom MOTD script: sudo nano /etc/update-motd.d/99-custom
+Save and exit.
 
+![image](https://github.com/user-attachments/assets/418d1188-fcd1-45ea-80d7-e333d63ad53b)
 
+Make it executable: sudo chmod +x /etc/update-motd.d/99-custom
 
+![image](https://github.com/user-attachments/assets/e94b91b7-06ce-450b-bb2e-1486e245d61d)
 
+Test run:
 
+![image](https://github.com/user-attachments/assets/f2243b41-bdec-438c-815d-72416ce7a7c1)
 
+![image](https://github.com/user-attachments/assets/9f1f24f0-4753-468e-9c3e-9944833a2027)
 
+Test figlet with color: sudo apt install ruby -y, sudo gem install lolcat
+Figlet “ICT171 is the BEST” | lolcat
 
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/a3a4e48b-84d8-43ca-9765-1f906496184f)
 
 
 
